@@ -1,0 +1,19 @@
+{
+  "name": "opinfo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SimoneGonzalez/OPinfo.git"
+  },
+  "author": "SimoneGonzalez <simone.b.gonzalez@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SimoneGonzalez/OPinfo/issues"
+  },
+  "homepage": "https://github.com/SimoneGonzalez/OPinfo#readme"
+}
