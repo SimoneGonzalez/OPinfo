@@ -7,21 +7,25 @@ html(lang="en-US", ng-app="opinfo")
     title Omega Pi Directory
     link(rel="stylesheet" href="lib/build.css")
     link(rel="stylesheet" href="css/main.css")
-  body
-    .container
-      nav
-        ul.navbar
-          li: a(href="/#/") Home
-          li: a(href="/#/contact") Contact
-          li: a(href="/#/about") About
-          li: a(href="/#/people") Directory
-          li: a(href="/#/profile") My Profile
-          li: a(href="/#/login") Login
-          li: a(href="/#/logout") Logout
-      .app(ng-view)
+  //- body
+  //-   .container
+  //-     ul
+  //-       li: a(href="/#/login") Login
+  //-     .app(ng-view)
+  //-     h1 Welcome!
+  //-     h2 Please Login or Register
+  header
+    img(class="cover" src="images/zdove.jpg" href="index.html")
+    h1 Omega Pi
+    nav
+      ul
+        li: a(class="button login" href="/#/login") Login
+        li: a(class="button register" href="/#/register") Register
     script(src="lib/build.js")
     script(src="js/main.js")
-    script(src="js/auth/auth.config.js")
-    script(src="js/auth/auth.controller.js")
-    script(src="js/auth/auth.factory.js")
+    script(src="assets/auth/loginAnim.js")
+    script(src="assets/js/auth/auth.config.js")
+    script(src="assets/js/auth/login.js")
+    script(src="assets/js/auth/auth.controller.js")
+    script(src="assets/js/auth/auth.factory.js")
 
