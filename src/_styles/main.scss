@@ -3,3 +3,39 @@
   list-style: none;
   }
 }
+
+.thumbnail img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+header {
+  h1 {
+    position: fixed;
+    top: 5px;
+    left: 20px;
+  }
+  img {
+    position: center;
+  }
+}
+
+nav {
+  ul {
+    position: fixed;
+    top: 5px;
+    right: 20%;
+    list-style: none;
+  }
+  li {
+    display: inline;
+    background: black;
+    border: solid black 1px;
+    color: white;
+    padding: 5px;
+    li:active {
+      color: white;
+    }
+  }
+}
+

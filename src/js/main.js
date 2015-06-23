@@ -1,5 +1,9 @@
 angular
-  .module('opinfo', [ngRoute])
+  .module('opinfo', ['ngRoute'])
+
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider
+        }])
 
   .service('authService', function () {
   })

@@ -1,13 +1,33 @@
-form(name="login")
-  label.control-label Login
-  input.form-control(type="text", placeholder="username")
-  input.form-control(type="password", placeholder="password")
-  input(type="submit")Login
-  input(type="submit")Forgot Password
+doctype html
+html(lang="en-US", ng-app="opinfo")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    title Omega Pi Directory
+    link(rel="stylesheet" href="lib/build.css")
+    link(rel="stylesheet" href="css/main.css")
+  body
+  .onLogedOut.hidden
+  .form-group(ng-class="")
+    label.control-label Username
+    input.form-control(name="", type="text", placeholder="username", required)
+  .form-group(ng-class="")
+    label.control-label Password
+    input.form-control(name="", type="password", placeholder="password", required)
+  button.btn.doRegister Register
+  input(name="login", type="submit", value="Login").btn.doLogin
+  button.btn.doReset Reset Password
 
-form(name="register")
-  label.control-label Register
-  input.form-control(type="text", placeholder="First Name")
-  input.form-control(type="text", placeholder="Username")
-  input.form-control(type="password", placeholder="Password")
-  input(type="submit")Register
+.onLoggedIn.hidden
+  h2 Hello {{user.name}}
+  nav
+    ul.navbar
+      li: a(href="/#/") Home
+      li: a(href="/#/contact") Contact
+      li: a(href="/#/about") About
+      li: a(href="/#/people") Directory
+      li: a(href="/#/profile") My Profile
+      li: a(href="/#/logout") Logout
+
+

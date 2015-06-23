@@ -12,22 +12,22 @@
             input.form-control(name="", type="text", placeholder="", ng-model="main.person.name", required)
           .form-group(ng-class="")
             label.control-label Phone
-            input.form-control(name="", type="text", placeholder="", ng-model="main.person.name", required)
+            input.form-control(name="", type="text", placeholder="", ng-model="main.person.phone", required)
           .form-group(ng-class="")
             label.control-label Email
-            input.form-control(name="", type="text", placeholder="", ng-model="main.person.name", required)
+            input.form-control(name="", type="text", placeholder="", ng-model="main.person.email", required)
           .form-group(ng-class="")
             label.control-label Address
-            input.form-control(name="", type="text", placeholder="", ng-model="main.person.name", required)
+            input.form-control(name="", type="text", placeholder="", ng-model="main.person.address", required)
           .form-group(ng-class="")
             label.control-label Occupation
-            input.form-control(name="", type="text", placeholder="", ng-model="main.person.name", required)
+            input.form-control(name="", type="text", placeholder="", ng-model="main.person.occup", required)
           .form-group(ng-class="")
             label.control-label Education
-            input.form-control(name="", type="text", placeholder="", ng-model="main.person.name", required)
+            input.form-control(name="", type="text", placeholder="", ng-model="main.person.educ", required)
           .form-group(ng-class="")
             label.control-label Additional Info
-            input.form-control(name="", type="text", placeholder="Hometown, hobbies and interests, etc.", ng-model="main.person.name", required)
+            input.form-control(name="", type="text", placeholder="Hometown, hobbies and interests, etc.", cols="40", rows="5", ng-model="main.person.info", required)
       .modal-footer
         button.btn.btn-danger(data-dismiss="modal") Cancel
         button.btn.btn-primary(ng-click="profileForm.$valid && main.saveAddress()", ng-disabled="profileForm.$invalid") Save

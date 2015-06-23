@@ -1,0 +1,8 @@
+.container(ng-app="opinfo")
+  h1 Hello
+  .upload(ng-controller="UploadCtrl as upload")
+    form(ng-submit="upload.submit()")
+      input(ngf-select, type="file", ng-model="upload.files", accept="image/*", ngf-change="upload.fileSelected()")
+      input(type="submit", value="Upload")
+    .thumbnail
+      img(ng-src="{{upload.thumbnailSrc}}")
