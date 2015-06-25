@@ -7,25 +7,25 @@ html(lang="en-US", ng-app="opinfo")
     title Omega Pi Directory
     link(rel="stylesheet" href="lib/build.css")
     link(rel="stylesheet" href="css/main.css")
-  //- body
-  //-   .container
-  //-     ul
-  //-       li: a(href="/#/login") Login
-  //-     .app(ng-view)
-  //-     h1 Welcome!
-  //-     h2 Please Login or Register
-  header
-    img(class="cover" src="images/zdove.jpg" href="index.html")
-    h1 Omega Pi
-    nav
-      ul
-        li: a(class="button login" href="/#/login") Login
-        li: a(class="button register" href="/#/register") Register
+  body
+    .container
+      h1 Omega Pi
+      img.thumbnail.logo(src="images/zdove.jpg" href="index.html")
+      nav
+        ul
+          li: a(class="button login" ng-hide="auth" href="/#/login") Login
+    section(ng-view)
     script(src="lib/build.js")
     script(src="js/main.js")
-    script(src="assets/auth/loginAnim.js")
-    script(src="assets/js/auth/auth.config.js")
-    script(src="assets/js/auth/login.js")
-    script(src="assets/js/auth/auth.controller.js")
-    script(src="assets/js/auth/auth.factory.js")
+    script(src="js/assets/main.config.js")
+    script(src="js/main.constant.js")
+    script(src="js/assets/js/auth/auth.config.js")
+    //script(src="js/assets/js/auth/login.js")
+    script(src="js/assets/js/auth/auth.controller.js")
+    script(src="js/assets/js/auth/auth.factory.js")
+    script(src="js/assets/people/people.controller.js")
+    script(src="js/assets/people/people.factory.js")
+    script(src="js/assets/people/photoUpload.config.js")
+
+
 

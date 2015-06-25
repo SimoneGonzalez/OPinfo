@@ -74,6 +74,14 @@ module.exports = function(grunt) {
             filter: 'isFile'
           }
         ]
+      },
+      images: {
+        expand:     true,
+        cwd:        'src/',
+        src:        ['/images'],
+        dest:       'public/',
+        filter:     'isFile',
+        flatten:    true
       }
     },
     cssmin: {
@@ -155,7 +163,8 @@ module.exports = function(grunt) {
         files: [
           'public/css/main.css',
           'public/js/**/*.js',
-          'public/**/*.html'
+          'public/**/*.html',
+          'public/images'
         ]
       },
       jade: {

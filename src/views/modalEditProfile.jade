@@ -30,5 +30,5 @@
             input.form-control(name="", type="text", placeholder="Hometown, hobbies and interests, etc.", cols="40", rows="5", ng-model="main.person.info", required)
       .modal-footer
         button.btn.btn-danger(data-dismiss="modal") Cancel
-        button.btn.btn-primary(ng-click="profileForm.$valid && main.saveAddress()", ng-disabled="profileForm.$invalid") Save
+        button.btn.btn-primary(ng-click="profileForm.$valid && main.saveProfile()", ng-disabled="profileForm.$invalid") Save
 

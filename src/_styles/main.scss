@@ -8,6 +8,10 @@
   max-width: 100px;
   max-height: 100px;
 }
+.logo {
+  height: 50px;
+  width: auto;
+}
 
 header {
   h1 {
@@ -31,6 +35,8 @@ nav {
   li {
     display: inline;
     padding: 5px;
+    height: 7px;
+    //background-image: (src="images/zdove.jpg");
     a:active, a:visited, a:link {
       color: white;
       text-decoration: none;

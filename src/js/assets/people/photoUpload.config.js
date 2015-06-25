@@ -1,5 +1,5 @@
 angular
-  .module('opinfo', [ngFileUpload])
+  .module('opinfo')
   .controller('UploadCtrl', function($scope, upload) {
     var vm = this;
 
