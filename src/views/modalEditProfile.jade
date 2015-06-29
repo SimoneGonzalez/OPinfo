@@ -1,34 +1,34 @@
 .modal.fade#modal
-  .modal-dialogue
+  .modal-dialog
     .modal-content
       .modal-header
         button.close(data-dismiss="modal")
           span &times;
-        h1
+        h1 Edit Profile
       .modal-body
-        form(name="profileForm")
-          .form-group(ng-class="")
+        form(name="profileForm" novalidate)
+          .form-group(ng-class="{'has-success': profileForm.n.$dirty && ppl.person.name.length > 1, 'has-error': profileForm.n.$dirty && !ppl.person.name}")
             label.control-label Name
-            input.form-control(name="", type="text", placeholder="", ng-model="main.person.name", required)
-          .form-group(ng-class="")
+            input.form-control(name="n", type="text", placeholder="Arizona", ng-model="ppl.person.name", required)
+          .form-group(ng-class="{'has-success': personForm.p.$dirty && ppl.person.phone, 'has-error': profileForm.p.$dirty && !ppl.person.phone}")
             label.control-label Phone
-            input.form-control(name="", type="text", placeholder="", ng-model="main.person.phone", required)
-          .form-group(ng-class="")
+            input.form-control(name="p", type="text", placeholder="555-555-5555", ng-model="ppl.person.phone", required)
+          .form-group(ng-class="{'has-success': personForm.e.$dirty && ppl.person.email, 'has-error': profileForm.e.$dirty && !ppl.person.email}")
             label.control-label Email
-            input.form-control(name="", type="text", placeholder="", ng-model="main.person.email", required)
-          .form-group(ng-class="")
+            input.form-control(name="e", type="text", placeholder="name@zeta.com", ng-model="ppl.person.email", required)
+          .form-group(ng-class="{'has-success': personForm.a.$dirty && ppl.person.address, 'has-error': profileForm.a.$dirty && !ppl.person.address}")
             label.control-label Address
-            input.form-control(name="", type="text", placeholder="", ng-model="main.person.address", required)
-          .form-group(ng-class="")
+            input.form-control(name="a", type="text", placeholder="1920 Zeta Way", ng-model="ppl.person.address", required)
+          .form-group(ng-class="{'has-success': profileForm.o.$dirty && ppl.person.occup, 'has-error': profileForm.o.$dirty && !ppl.person.occup}")
             label.control-label Occupation
-            input.form-control(name="", type="text", placeholder="", ng-model="main.person.occup", required)
-          .form-group(ng-class="")
-            label.control-label Education
-            input.form-control(name="", type="text", placeholder="", ng-model="main.person.educ", required)
-          .form-group(ng-class="")
+            input.form-control(name="o", type="text", placeholder="Web Developer", ng-model="ppl.person.occup", required)
+          .form-group(ng-class="{'has-success': profileForm.e.$dirty && ppl.person.info, 'has-error': profileForm.e.$dirty && !ppl.person.info}")
             label.control-label Additional Info
-            input.form-control(name="", type="text", placeholder="Hometown, hobbies and interests, etc.", cols="40", rows="5", ng-model="main.person.info", required)
+            input.form-control(name="e", type="text", placeholder="Hometown, hobbies and interests, etc.", cols="40", rows="5", ng-model="ppl.person.info", required)
+          .form-group(ng-class="{'has-success': profileForm.t.$dirty && profileForm.i.$valid , 'has-error': profileForm.t.$dirty && profileForm.i.$invalid }")
+            label.control-label Profile Photo
+            input.form-control(name="i", type="url", placeholder="http://google.com/img.jpg", ng-model="ppl.person.photo", required)
       .modal-footer
         button.btn.btn-danger(data-dismiss="modal") Cancel
-        button.btn.btn-primary(ng-click="profileForm.$valid && main.saveProfile()", ng-disabled="profileForm.$invalid") Save
+        button.btn.btn-primary(ng-click="profileForm.$valid && ppl.saveProfile()", ng-disabled="profileForm.$invalid") Save
 

@@ -25,31 +25,31 @@ header {
   }
 }
 
-nav {
-  ul {
-    position: fixed;
-    top: 5px;
-    right: 20%;
-    list-style: none;
-  }
-  li {
-    display: inline;
-    padding: 5px;
-    height: 7px;
-    //background-image: (src="images/zdove.jpg");
-    a:active, a:visited, a:link {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      background-color: #000044;
-      //border: solid #000044 5px;
-    }
-  }
-}
-a:hover {
-  color: black;
-  background-color: #000066;
-  text-decoration: underline;
-  //border: solid #000066 5px;
-}
+// nav {
+//   ul {
+//     position: fixed;
+//     top: 5px;
+//     right: 20%;
+//     list-style: none;
+//   }
+//   li {
+//     display: inline;
+//     padding: 5px;
+//     height: 7px;
+//     //background-image: (src="images/zdove.jpg");
+//     a:active, a:visited, a:link {
+//       color: white;
+//       text-decoration: none;
+//       font-weight: bold;
+//       background-color: #000044;
+//       //border: solid #000044 5px;
+//     }
+//   }
+// }
+// a:hover {
+//   color: black;
+//   background-color: #000066;
+//   text-decoration: underline;
+//   //border: solid #000066 5px;
+// }
 

@@ -1,8 +1,19 @@
-.profile(ng-include="views/modalEditProfile.html" onload="ppl.onModalLoad()")
-  img(src="" alt="Profile photo")
+//Profile should show up here unless new user
+//in which case empty profile with temporary profile photo should be here
+ul
+  li: Edit Profile
+  li: Logout
+  li: Change Password
 
-  //hamburger menu
-  ul
-    li: Edit Profile
-    li: Logout
-    li: Change Password
+h1 {{ppl.person.name}}
+img(ng-src="{{ppl.person.photo}}")
+//- a(href="http://twitter.com/{{main.person.twitter}}", target="_blank") {{main.person.twitter}}
+a(href="tel:{{ppl.person.phone}}") {{ppl.person.phone}}
+a(href="mailto:{{ppl.person.email}}") {{ppl.person.email}}
+p {{ppl.person.address}}
+p {{ppl.person.occup}}
+p {{ppl.person.info}}
+a.btn.btn-primary(ng-click="ppl.onModalLoad()") Edit
+a.btn.btn-danger(ng-click="ppl.destroy()") Delete
+
+.profile(ng-include="'views/modalEditProfile.html'")

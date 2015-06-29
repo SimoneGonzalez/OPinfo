@@ -49,4 +49,3 @@ angular
       };
       return factory;
     });
-

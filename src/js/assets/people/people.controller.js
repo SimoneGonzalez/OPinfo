@@ -1,8 +1,12 @@
 angular
   .module('opinfo')
-  .controller('peopleCtrl', function() {
+  .controller('peopleCtrl', function(Person, $location) {
     var vm = this;
 
+    Person.getAll(function(people) {
+      vm.people = people;
+      console.log(people)
+    })
     vm.onModalLoad = function() {
       $('#modal').modal('show');
 
@@ -13,13 +17,15 @@ angular
     };
 
     vm.saveProfile = function() {
-      Person.create(vm.person, function() {
+      Person.update(vm.person, function() {
         $('#modal').modal('hide');
         console.log("saved profile");
       });
     };
+  })
+  .controller('profileCtrl', function() {
 
-    Person.getAll(function(people) {
-      vm.people = people;
-    })
+  })
+  .controller('editCtrl', function() {
+
   });
