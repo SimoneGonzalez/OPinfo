@@ -1,8 +1,26 @@
 nav
   ul.navbar
-    li: a(href="/#/") Home
     li: a(href="/#/contact") Contact
     li: a(href="/#/about") About
     li: a(href="/#/people") Directory
     li: a(href="/#/profile") My Profile
     li: a(href="/#/logout") Logout
+
+.directory(ng-repeat="member in ppl.finalPeople")
+  table.table
+    tr
+      th Name
+      th Photo
+      th Phone Number
+      th Email
+      th Address
+      th Occupation
+      th Additional Information
+    tr
+      td {{member.name}}
+      td {{member.photo}}
+      td {{member.phone}}
+      td {{member.email}}
+      td {{member.address}}
+      td {{member.occup}}
+      td {{member.info}}

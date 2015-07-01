@@ -1,6 +1,6 @@
 angular
   .module('opinfo')
-  .controller('LoginCtrl', function($scope, $location, authFactory) {
+  .controller('LoginCtrl', function($scope, $rootScope,$location, authFactory) {
     var vm = this;
     vm.doLogin = function() {
       authFactory.login(vm.email, vm.password, function() {
@@ -19,8 +19,17 @@ angular
       authFactory.register(vm.email, vm.password, function(err) {
         if(err) {}
           else {
+            var id = $rootScope.auth.uid.replace(':', "%3A");
+            var data = {'name': 'zoe', 'phonenumber':'9999999999'}
+            authFactory.userInfo(id, data, function(){
+              if(err){}
+                else{
+                  console.log('info successfully saved')
+                }
+            })
             console.log("You have successfully registered. Please login.")
           }
+        //reroute to create profile
         $location.path('/login');
         $scope.$apply();
       });

@@ -34,7 +34,6 @@ angular
       // })
       .when('/logout', {
         template: '<h1>Logging out...</h1>',
-        redirectTo: '/login',
         controller: 'LogoutCtrl'
       })
       .otherwise({

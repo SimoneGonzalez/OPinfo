@@ -1,6 +1,6 @@
 angular
   .module('opinfo')
-  .factory('authFactory', function($rootScope, $location, FIRE_URL) {
+  .factory('authFactory', function($rootScope, $location, $http, FIRE_URL) {
     var fb = new Firebase(FIRE_URL);
     var factory = {};
     $rootScope.user = fb.getAuth();
@@ -40,7 +40,14 @@ angular
           }
         });
       };
-
+      factory.userInfo = function(id, data,cb){
+        console.log('hit the userInfo factory');
+        $http
+          .post(`${FIRE_URL}members/${id}.json`, data)
+          .success(cb, function(data) {
+            members = data;
+          });
+      };
       factory.logout = function(cb) {
         fb.unauth(function() {
           $rootScope.auth = null;

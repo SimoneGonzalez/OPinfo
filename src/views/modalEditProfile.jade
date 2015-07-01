@@ -27,7 +27,11 @@
             input.form-control(name="e", type="text", placeholder="Hometown, hobbies and interests, etc.", cols="40", rows="5", ng-model="ppl.person.info", required)
           .form-group(ng-class="{'has-success': profileForm.t.$dirty && profileForm.i.$valid , 'has-error': profileForm.t.$dirty && profileForm.i.$invalid }")
             label.control-label Profile Photo
-            input.form-control(name="i", type="url", placeholder="http://google.com/img.jpg", ng-model="ppl.person.photo", required)
+            //input.form-control(name="i", type="url", placeholder="http://google.com/img.jpg", ng-model="ppl.person.photo", required)
+            .upload(ng-controller="UploadCtrl as upload")
+              form(ng-submit="upload.submit()")
+                input(ngf-select, type="file", ng-model="upload.files", accept="image/*", ngf-change="upload.fileSelected()")
+                input(type="submit", value="Upload")
       .modal-footer
         button.btn.btn-danger(data-dismiss="modal") Cancel
         button.btn.btn-primary(ng-click="profileForm.$valid && ppl.saveProfile()", ng-disabled="profileForm.$invalid") Save
