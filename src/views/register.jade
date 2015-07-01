@@ -1,11 +1,28 @@
-.form-group(ng-class="")
-  label.control-label Username
-  input.form-control(name="", type="text", placeholder="username", required)
-.form-group(ng-class="")
-  label.control-label Password
-  input.form-control(name="", type="password", placeholder="password", required)
-.form-group(ng-class="")
-  label.control-label Password
-  input.form-control(name="", type="password", placeholder="re-type password", required)
-button.btn(ng-click="createUser()")
+form(ng-submit="auth.doRegister()")
+  .form-group(ng-class="{'has-success': personForm.e.$dirty && person.email, 'has-error': profileForm.e.$dirty && !person.email}")
+    label.control-label Email
+    input.form-control(name="e", type="text", placeholder="name@zeta.com", ng-model="auth.personr.email", required)
+  .form-group(ng-class="")
+    label.control-label Password
+    input.form-control(name="", type="password", placeholder="password", ng-model='auth.personr.password', required)
+  .form-group(ng-class="")
+    label.control-label Password
+    input.form-control(name="", type="password", placeholder="re-type password", required)
+  .form-group(ng-class="{'has-success': profileForm.n.$dirty && person.name.length > 1, 'has-error': profileForm.n.$dirty && !person.name}")
+    label.control-label Name
+    input.form-control(name="n", type="text", placeholder="Arizona", ng-model="auth.person.name", required)
+  .form-group(ng-class="{'has-success': personForm.p.$dirty && person.phone, 'has-error': profileForm.p.$dirty && !person.phone}")
+    label.control-label Phone
+    input.form-control(name="p", type="text", placeholder="555-555-5555", ng-model="auth.person.phone", required)
+  .form-group(ng-class="{'has-success': personForm.a.$dirty && person.address, 'has-error': profileForm.a.$dirty && !person.address}")
+    label.control-label Address
+    input.form-control(name="a", type="text", placeholder="1920 Zeta Way", ng-model="auth.person.address", required)
+  .form-group(ng-class="{'has-success': profileForm.o.$dirty && person.occup, 'has-error': profileForm.o.$dirty && !person.occup}")
+    label.control-label Occupation
+    input.form-control(name="o", type="text", placeholder="Web Developer", ng-model="auth.person.occup", required)
+  .form-group(ng-class="{'has-success': profileForm.e.$dirty && person.info, 'has-error': profileForm.e.$dirty && !person.info}")
+    label.control-label Additional Info
+    input.form-control(name="e", type="text", placeholder="Hometown, hobbies and interests, etc.", cols="40", rows="5", ng-model="auth.person.info", required)
+
+  button.btn(ng-click="doRegister()") Register
 

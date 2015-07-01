@@ -28,6 +28,7 @@ angular
       };
 
       factory.register = function(email, password, cb) {
+        console.log('register factory')
         fb.createUser({
           email: email,
           password: password

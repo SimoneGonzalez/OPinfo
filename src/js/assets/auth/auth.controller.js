@@ -16,13 +16,13 @@ angular
       })
     }
     vm.doRegister = function() {
-      authFactory.register(vm.email, vm.password, function(err) {
-        if(err) {}
+      console.log('register button hit');
+      authFactory.register(vm.personr.email, vm.personr.password, function(err) {
+        if(err) {console.log('register error',err)}
           else {
             var id = $rootScope.auth.uid.replace(':', "%3A");
-            var data = {'name': 'zoe', 'phonenumber':'9999999999'}
-            authFactory.userInfo(id, data, function(){
-              if(err){}
+            authFactory.userInfo(id, vm.person, function(){
+              if(err){console.log('user info error', err)}
                 else{
                   console.log('info successfully saved')
                 }

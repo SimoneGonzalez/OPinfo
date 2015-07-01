@@ -21,7 +21,8 @@ angular
       })
       .when('/register', {
         templateUrl: '/views/register.html',
-        controller: 'registerCtrl'
+        controller: 'LoginCtrl',
+        controllerAs: 'auth'
       })
       .when('/profile', {
         templateUrl: 'views/profile.html',
