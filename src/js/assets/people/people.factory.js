@@ -1,9 +1,5 @@
 angular
   .module('opinfo')
-  .factory('Members', function($resource) {
-    return $resource('https://opinfo.firebaseio.com/members/:id.json');
-
-  })
   .factory('Person', function($http, FIRE_URL) {
     return {
     create(data, cb) {
@@ -18,11 +14,15 @@ angular
           members = data;
         });
     },
-   update(data, cb, id) {
+   update(data, id, cb) {
     $http
       .put(`${FIRE_URL}members/${id}.json`, data)
       .success(cb);
+   },
+   getProfile(id, cb) {
+    $http
+      .get(`${FIRE_URL}members/${id}.json`)
+      .success(cb);
    }
-   };
-
+  }
   });

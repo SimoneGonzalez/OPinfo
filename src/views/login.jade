@@ -5,6 +5,5 @@ form(ng-submit="auth.doLogin()")
   .form-group(ng-class="")
     label.control-label Password
     input.form-control(name="password", ng-model="auth.password", type="password", placeholder="password", required)
-  button.btn.doRegister(ng-click="auth.doRegister()") Register
   input(name="login", type="submit", value="Login").btn.doLogin
   button.btn.doReset(ng-click="auth.doReset()") Reset Password

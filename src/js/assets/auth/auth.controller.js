@@ -41,6 +41,6 @@ angular
     fb.unauth(function() {
       $rootScope.auth = null;
       $location.path('/login');
-      $scope.$apply();
+      $scope.$digest();
     });
   });

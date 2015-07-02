@@ -11,9 +11,6 @@ html(lang="en-US", ng-app="opinfo")
     .container
       h1 Omega Pi
       img.thumbnail.logo(src="images/zdove.jpg" href="index.html")
-      nav
-        ul
-          li: a(class="button login" ng-hide="auth" href="/#/login") Login
     section(ng-view)
     script(src="lib/build.js")
     script(src="js/main.js")
@@ -22,6 +19,8 @@ html(lang="en-US", ng-app="opinfo")
     script(src="js/assets/auth/auth.config.js")
     script(src="js/assets/auth/auth.controller.js")
     script(src="js/assets/auth/auth.factory.js")
+    script(src="js/assets/people/profile.controller.js")
+    script(src="js/assets/people/profile.factory.js")
     script(src="js/assets/people/people.controller.js")
     script(src="js/assets/people/people.factory.js")
     script(src="js/assets/people/photoUpload.config.js")

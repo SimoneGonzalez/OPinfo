@@ -6,7 +6,7 @@ nav
     li: a(href="/#/profile") My Profile
     li: a(href="/#/logout") Logout
 
-.directory(ng-repeat="member in ppl.finalPeople")
+.directory
   table.table
     tr
       th Name
@@ -16,7 +16,7 @@ nav
       th Address
       th Occupation
       th Additional Information
-    tr
+    tr(ng-repeat="member in ppl.finalPeople")
       td {{member.name}}
       td {{member.photo}}
       td {{member.phone}}

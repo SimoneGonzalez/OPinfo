@@ -26,8 +26,8 @@ angular
       })
       .when('/profile', {
         templateUrl: 'views/profile.html',
-        controller: 'peopleCtrl',
-        controllerAs: 'ppl'
+        controller: 'profileCtrl',
+        controllerAs: 'profile'
       })
       // .when('/forgotPassword', {
       //   templateUrl: 'forgotpassword.html',

@@ -1,6 +1,6 @@
 angular
   .module('opinfo')
-  .controller('peopleCtrl', function(Person, $location) {
+  .controller('peopleCtrl', function(Person, $scope, $location) {
     var vm = this;
 
     Person.getAll(function(people) {
@@ -13,6 +13,11 @@ angular
         vm.finalPeople.push(stuff);
       }
     })
+    vm.profile = function() {
+      Person.getProfile($rootScope.auth.uid, function() {
+        console.log('get Profile');
+      });
+    }
     vm.onModalLoad = function() {
       $('#modal').modal('show');
 
@@ -28,11 +33,3 @@ angular
       });
     };
   })
-
-  .controller('profileCtrl', function() {
-
-  })
-  //need to bind data so it shows up in modal to be edited
-  .controller('editCtrl', function() {
-
-  });
