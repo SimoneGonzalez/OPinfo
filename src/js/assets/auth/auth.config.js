@@ -48,6 +48,7 @@ angular
         redirectTo: 'login'
       })
       .otherwise({
-       redirectTo: '/login'
+       redirectTo: '/',
+       templateUrl: 'views/home.html'
     });
   });
