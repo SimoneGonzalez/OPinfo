@@ -4,7 +4,7 @@
       .modal-header
         button.close(data-dismiss="modal")
           span &times;
-        h1 Edit Profile
+        h4 Edit Profile
       .modal-body
         form(name="profileForm" novalidate)
           .form-group(ng-class="{'has-success': profileForm.n.$dirty && profile.profile.name.length > 1, 'has-error': profileForm.n.$dirty && !profile.profile.name}")

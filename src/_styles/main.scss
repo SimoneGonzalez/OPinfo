@@ -13,6 +13,14 @@ h2 {
   font-family: 'Great Vibes', cursive;
 }
 
+.authbtns ul {
+  height: 10%;
+  width: auto;
+  justify-content: center;
+  li {
+  display: inline;
+  }
+}
 //login.jade style
 .space {
   padding: 10px;
@@ -61,9 +69,6 @@ label, .btn {
 .navbar {
   position: fixed;
   top: 25px;
-  ul {
-  list-style: none;
-  }
 }
 
 header {
