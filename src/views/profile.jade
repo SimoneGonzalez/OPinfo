@@ -8,14 +8,14 @@ nav
 
 //Profile should show up here
 .my_profile
-  h1 {{ppl.finalPeople.name}}
-  img(ng-src="{{ppl.person.photo}}")
-  a(href="tel:{{ppl.person.phone}}") {{ppl.member.phone}}
-  a(href="mailto:{{ppl.person.email}}") {{ppl.person.email}}
-  p {{ppl.person.address}}
-  p {{ppl.person.occup}}
-  p {{ppl.person.info}}
-  a.btn.btn-primary(ng-click="ppl.onModalLoad()") Edit
-  a.btn.btn-danger(ng-click="ppl.destroy()") Delete
+  h1 {{profile.profile.name}}
+  img(ng-src="{{profile.profile.photo}}")
+  a(href="tel:{{profile.profile.phone}}") {{profile.profile.phone}}
+  a(href="mailto:{{profile.profile.email}}") {{profile.profile.email}}
+  p {{profile.profile.address}}
+  p {{profile.profile.occup}}
+  p {{profile.profile.info}}
+  a.btn.btn-primary(ng-click="profile.onModalLoad()") Edit
+  a.btn.btn-danger(ng-click="profile.destroy()") Delete
 
 .profile(ng-include="'views/modalEditProfile.html'")

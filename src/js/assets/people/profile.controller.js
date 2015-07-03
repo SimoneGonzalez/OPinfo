@@ -5,8 +5,10 @@ angular
 
     vm.profile = function() {
       console.log('inside profile');
-      Profile.getProfile($rootScope.auth.uid, function(profile) {
-        console.log('get Profile', profile);
+      Profile.getProfile($rootScope.auth.uid, function(myProfile) {
+        var objectUid = Object.keys(myProfile);
+        vm.profile = myProfile[objectUid];
+        console.log('get Profile', myProfile);
       });
     }
     vm.onModalLoad = function() {
