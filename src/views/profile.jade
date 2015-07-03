@@ -8,11 +8,11 @@ nav
 
 //Profile should show up here
 .my_profile
-  h1 {{profile.profile.name}}
+  h3 {{profile.profile.name}}
   img(ng-src="{{profile.profile.photo}}")
   a(href="tel:{{profile.profile.phone}}") {{profile.profile.phone}}
   a(href="mailto:{{profile.profile.email}}") {{profile.profile.email}}
-  p {{profile.profile.address}}
+  address {{profile.profile.address}}
   p {{profile.profile.occup}}
   p {{profile.profile.info}}
   a.btn.btn-primary(ng-click="profile.onModalLoad()") Edit

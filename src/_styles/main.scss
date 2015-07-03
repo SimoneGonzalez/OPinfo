@@ -1,16 +1,56 @@
+//small screen
+// @media (min-width: @screen-sm-min) {
+//   background:
+// }
+
+//index style
+h1 {
+  font-family: 'Ruslan Display', cursive;
+  font-size: 48px;
+}
+
+h2 {
+  font-family: 'Great Vibes', cursive;
+}
+
+//login.jade style
+.space {
+  padding: 10px;
+}
+
+.full {
+  width: 100%;
+  padding: 0;
+}
+
+.login-outer {
+  background-image: url("/images/lenseflare.jpg");
+  //opacity: 0.6;
+  background: #0000FF ;
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form, .doLogin, .doReset {
+  position: relative;
+  margin: 5px;
+}
+
+label, .btn {
+}
+.half {
+  witdth: 50%;
+}
+//people and profile style
 .navbar {
+  position: fixed;
+  top: 25px;
   ul {
   list-style: none;
   }
-}
-
-.thumbnail img {
-  max-width: 100px;
-  max-height: 100px;
-}
-.logo {
-  height: 50px;
-  width: auto;
 }
 
 header {
@@ -23,6 +63,7 @@ header {
 }
 
 nav {
+  float: left;
   ul {
     list-style: none;
   }
@@ -31,19 +72,25 @@ nav {
     padding: 5px;
     height: 7px;
     //background-image: (src="images/zdove.jpg");
-    a:active, a:visited, a:link {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      background-color: #000044;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #0000FF;
+    border-radius: 20%;
       //border: solid #000044 5px;
-    }
+      a {
+        color: white;
+      }
   }
 }
-a:hover {
-  color: black;
-  background-color: #000066;
-  text-decoration: underline;
+a:active {
+  background-image: url("/images/zdove.jpg")
   //border: solid #000066 5px;
+}
+
+.directory {
+  background-image: url("/images/marble,jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
 }
 

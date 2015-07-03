@@ -1,9 +1,13 @@
-form(ng-submit="auth.doLogin()")
-  .form-group(ng-class="")
-    label.control-label Email
-    input.form-control(name="email", ng-model="auth.email", type="text", placeholder="email", required)
-  .form-group(ng-class="")
-    label.control-label Password
-    input.form-control(name="password", ng-model="auth.password", type="password", placeholder="password", required)
-  input(name="login", type="submit", value="Login").btn.doLogin
-  button.btn.doReset(ng-click="auth.doReset()") Reset Password
+.container-fluid.full
+  .login-outer.col-xs-12
+    .login-inner
+      form.form(ng-submit="auth.doLogin()")
+        .form-group.text-center.full(ng-class="")
+          label.control-label.space Email
+          input(name="email", ng-model="auth.email", type="text", placeholder="email", required)
+        .form-group.text-center(ng-class="")
+          label.control-label Password
+          input(name="password", ng-model="auth.password", type="password", placeholder="password", required)
+        .buttons.text-center
+          input.btn.btn-sm.btn-default.doLogin(name="login", type="submit", value="Login")
+          button.btn.btn-sm.btn-default.doReset(ng-click="auth.doReset()") Reset Password
