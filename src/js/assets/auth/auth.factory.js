@@ -19,6 +19,7 @@ angular
           password: password
         }, function(err, authData) {
           if (err) {
+            alert(err);
             console.log(err);
           } else {
             $rootScope.auth = authData;

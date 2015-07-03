@@ -29,13 +29,20 @@ angular
         controller: 'profileCtrl',
         controllerAs: 'profile'
       })
+      .when('/contact', {
+        templateUrl: 'views/contact.html'
+      })
+      .when('/donate', {
+        templateUrl: 'views/donate.html'
+      })
       // .when('/forgotPassword', {
       //   templateUrl: 'forgotpassword.html',
       //   controller: 'forgotCtrl'
       // })
       .when('/logout', {
         template: '<h1>Logging out...</h1>',
-        controller: 'LogoutCtrl'
+        controller: 'LogoutCtrl',
+        redirectTo: 'login'
       })
       .otherwise({
        redirectTo: '/login'

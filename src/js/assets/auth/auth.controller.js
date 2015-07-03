@@ -4,13 +4,13 @@ angular
     var vm = this;
     vm.doLogin = function() {
       authFactory.login(vm.email, vm.password, function() {
-        console.log('this worksss')
+        console.log('login works')
         $location.path('/people');
         $scope.$apply();
       });
     }
     vm.doReset = function() {
-      authFactory.reset(vm.email, function() {
+      authFactory.reset(vm.email, vm.password, function() {
         console.log("reset clicked");
 
       })
@@ -27,9 +27,8 @@ angular
                   console.log('info successfully saved')
                 }
             })
-            console.log("You have successfully registered. Please login.")
+            alert("You have successfully registered. Please login.")
           }
-        //reroute to create profile
         $location.path('/login');
         $scope.$apply();
       });
@@ -41,6 +40,6 @@ angular
     fb.unauth(function() {
       $rootScope.auth = null;
       $location.path('/login');
-      $scope.$digest();
+      $scope.$apply();
     });
   });

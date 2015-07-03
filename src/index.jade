@@ -10,8 +10,12 @@ html(lang="en-US", ng-app="opinfo")
     link(href='http://fonts.googleapis.com/css?family=Ruslan+Display|Great+Vibes' rel='stylesheet' type='text/css')
   body
     .container.text-right
-      h1 Dovehub
+      h1 Dovequarters
       h2 Welcome Home
+    .authbtns
+      ul
+        li: a(href="/#/login") Login
+        li: a(href="/#/register") Register
     section(ng-view)
     script(src="lib/build.js")
     script(src="js/main.js")
