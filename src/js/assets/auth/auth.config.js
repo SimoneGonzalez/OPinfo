@@ -49,11 +49,12 @@ angular
       .when('/logout', {
         template: '<h1>Logging out...</h1>',
         controller: 'LogoutCtrl',
-        redirectTo: 'login'
+        controllerAs: 'logout',
+        redirectTo: '/login'
       })
       .otherwise({
        redirectTo: '/',
        templateUrl: 'views/home.html',
-       controller: 'LogoutCtrl'
+       controller: 'navCtrl'
     });
   });

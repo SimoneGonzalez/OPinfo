@@ -18,7 +18,6 @@ angular
       $('.contact').css(noimage);
       $('.directory').css(noimage);
       $('.profile').css(noimage);
-      $('.donate').css(noimage);
       $('.logout').css(noimage);
     };
     $scope.directoryPage = function() {
@@ -40,7 +39,7 @@ angular
       $('.logout').css(noimage);
     };
     $scope.logoutPage = function() {
-      $location.path('/logout');
-    };
+        $location.path('/logout');
+      };
   //end of controller
   });

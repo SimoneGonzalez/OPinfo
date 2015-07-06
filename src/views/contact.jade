@@ -1,24 +1,27 @@
-section.container-fluid.bkgrnd
+section.container-fluid.bkgrnd.row
   //make image have zindex -1
   //img(src="images/clouds.jpg").bkgrnd.img-responsive
   //put in transparent box centered on page
   //eventualy put link to profile here
   section.simone.col-md-4.col-xs-12
     p Contact Simone Gonzalez
-    img(src="images/linkedin.jpeg" alt="linkedin" href="https://www.linkedin.com/in/simonegonzalez")
-  //float right also in transparent box
+    a(href="https://www.linkedin.com/in/simonegonzalez")
+      img(src="images/linkedin.jpg" alt="linkedin")
   section.opmedia.col-md-4.col-xs-12
-    Connect with Omega Pi on social media:
+    p Connect with Omega Pi on social media:
       ul
-        li: img(src="/images/facebook.png" href="https://www.facebook.com/groups/omegapizphib/")
-        li: img(src="/images/twitter.jpg" href="https://twitter.com/OmegaPiZetas")
-        li: img(src="/images/tumblr.jpeg" href="http://omegapizetas.tumblr.com/")
-    And on the
+        li: a(href="http://omegapizetas.tumblr.com/")
+          img(src="/images/tumblr.jpg" alt="tumblr")
+        li: a(href="https://twitter.com/OmegaPiZetas")
+          img(src="/images/twitter.jpg" alt="twitter")
+        li: a(href="https://www.facebook.com/groups/omegapizphib/")
+          img(src="/images/facebook.jpg" alt="facebook")
+    p and on the
       a(href="omegapizphib.wix.com/vandyzetas")  web.
   section.vandy.col-md-4.col-xs-12
     Contact Greek Life Office at Vanderbilt:
-      ul
-        li: phone
-        li: Name
-        li: email
-        li: address
+    ul
+      li Kristin Torrey or Anthony Williams
+      li 615-322-2048
+      li greeklife@vanderbilt.edu
+      li Sarratt Student Center, Suite 207

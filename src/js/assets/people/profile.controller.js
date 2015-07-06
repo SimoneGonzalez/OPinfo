@@ -20,9 +20,13 @@ angular
         });
     };
     vm.saveProfile = function() {
-      Profile.update(vm.person, function() {
-        $('#modal').modal('hide');
-        console.log("saved profile");
+      Profile.getProfile($rootScope.auth.uid, function(myProfile) {
+        var objectUid = Object.keys(myProfile);
+        var id = $rootScope.auth.uid.replace(':', "%3A");
+        Profile.update(vm.profile.profile, id, function() {
+          $('#modal').modal('hide');
+          console.log("saved profile", vm.profile.profile, myProfile);
+        });
       });
     };
     vm.profile()

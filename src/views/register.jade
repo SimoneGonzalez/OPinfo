@@ -1,4 +1,4 @@
-form(ng-submit="auth.doRegister()")
+form.reg(ng-submit="auth.doRegister()")
   .form-group(ng-class="{'has-success': personForm.e.$dirty && person.email, 'has-error': profileForm.e.$dirty && !person.email}")
     label.control-label Email
     input.form-control(name="e", type="text", placeholder="name@zeta.com", ng-model="auth.personr.email", required)

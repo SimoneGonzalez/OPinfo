@@ -1,13 +1,17 @@
-//Profile should show up here
-.my_profile
-  h3 {{profile.profile.name}}
-  img(ng-src="{{profile.profile.photo}}")
-  a(href="tel:{{profile.profile.phone}}") {{profile.profile.phone}}
-  a(href="mailto:{{profile.profile.email}}") {{profile.profile.email}}
-  address {{profile.profile.address}}
-  p {{profile.profile.occup}}
-  p {{profile.profile.info}}
-  a.btn.btn-primary(ng-click="profile.onModalLoad()") Edit
-  a.btn.btn-danger(ng-click="profile.destroy()") Delete
+.container-fluid
+  .col-md-4.col-xs-12
+  .col-md-4.col-xs-12.my_profile
+    .col-md-4
+    .col-md-4(ng-show='auth')
+      h3 {{profile.profile.name}}
+      img(ng-src="{{profile.profile.photo}}")
+      a(href="tel:{{profile.profile.phone}}") {{profile.profile.phone}}
+      a(href="mailto:{{profile.profile.email}}") {{profile.profile.email}}
+      address {{profile.profile.address}}
+      p {{profile.profile.occup}}
+      p {{profile.profile.info}}
+      a.btn.btn-primary(ng-click="profile.onModalLoad()") Edit
+      //a.btn.btn-danger(ng-click="profile.destroy()") Delete
+    .col-md-4
+  .col-md-4.col-xs-12.profile(ng-include="'views/modalEditProfile.html'")
 
-.profile(ng-include="'views/modalEditProfile.html'")
