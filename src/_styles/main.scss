@@ -14,19 +14,6 @@ h2 {
   font-size: 36px;
 }
 
-.authbtns ul {
-  height: 10%;
-  width: auto;
-  justify-content: center;
-  li {
-    display: inline-block;
-    border: solid grey 1px;
-    border-radius: 10% 25%;
-    font-size: 20px;
-    margin: 10px;
-    padding: 5px;
-  }
-}
 //login.jade style
 .space {
   padding: 10px;
@@ -120,10 +107,17 @@ ul {
   background-image: url("/images/marble1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-
-
 }
 
+//profile page style
+.my_profile {
+  width: 200px;
+  align-items: center;
+  img {
+    height: 100px;
+    width: 100px;
+  }
+}
 //contact page style
 .bkgrnd {
   //z-index: -1;
@@ -137,4 +131,41 @@ ul {
   float: left;
   height: 400px;
   font-size: 24px;
+  padding: 15px;
+    img {
+      height: 50px;
+      width: 50px;
+    }
+    li {
+      padding: 5px;
+    }
+}
+//home
+.rw {
+  height: 150px;
+}
+
+.authbtns {
+  background-color: #4169E1;
+  height: 400px;
+  a {
+   color: white;
+  };
+  ul {
+  height: 10%;
+  width: auto;
+  justify-content: center;
+    li {
+      display: inline-block;
+      border: solid grey 1px;
+      border-radius: 10% 25%;
+      font-size: 20px;
+      margin: 10px 40px;
+      padding: 5px;
+    };
+  };
+}
+//register page
+.reg {
+  margin: 10px;
 }

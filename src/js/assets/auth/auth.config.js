@@ -2,9 +2,9 @@ angular
   .module('opinfo')
   .config(function($routeProvider, $locationProvider) {
     $routeProvider
-      // .when('/', {
-      //   templateUrl: 'index.html'
-      // })
+      .when('/', {
+        templateUrl: 'views/home.html'
+      })
       .when('/login', {
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl',
