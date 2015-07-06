@@ -1,29 +1,21 @@
-nav
-  ul.navbar
-    li: a(href="/#/contact") Contact
-    li: a(href="/#/donate") Donate
-    li: a(href="/#/people") Directory
-    li: a(href="/#/profile") My Profile
-    li: a(href="/#/logout") Logout
-
-section.container-fluid
+section.container-fluid.bkgrnd
   //make image have zindex -1
-  img(src="images/clouds.jpg")
+  //img(src="images/clouds.jpg").bkgrnd.img-responsive
   //put in transparent box centered on page
   //eventualy put link to profile here
-  section.simone
+  section.simone.col-md-4.col-xs-12
     p Contact Simone Gonzalez
-      img(src="images/linkedin.png" href="https://www.linkedin.com/in/simonegonzalez")
+    img(src="images/linkedin.jpeg" alt="linkedin" href="https://www.linkedin.com/in/simonegonzalez")
   //float right also in transparent box
-  section.opmedia
+  section.opmedia.col-md-4.col-xs-12
     Connect with Omega Pi on social media:
       ul
-        li: img(src="" href="")
-        li: img(src="" href="")
-        li: img(src="" href="")
-    And on the web at
-      a(href="omegapizphib.wix.com/vandyzetas")
-  section.vandy
+        li: img(src="/images/facebook.png" href="https://www.facebook.com/groups/omegapizphib/")
+        li: img(src="/images/twitter.jpg" href="https://twitter.com/OmegaPiZetas")
+        li: img(src="/images/tumblr.jpeg" href="http://omegapizetas.tumblr.com/")
+    And on the
+      a(href="omegapizphib.wix.com/vandyzetas")  web.
+  section.vandy.col-md-4.col-xs-12
     Contact Greek Life Office at Vanderbilt:
       ul
         li: phone

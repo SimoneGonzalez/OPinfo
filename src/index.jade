@@ -12,11 +12,21 @@ html(lang="en-US", ng-app="opinfo")
     .container.text-right
       h1 Dovequarters
       h2 Welcome Home
+
+    nav(ng-show='auth')
+      ul.navbar(ng-controller='navCtrl')
+        button.btn.contact(ng-click='contactPage()') Contact
+        button.btn.donate(ng-click="donatePage()") Donate
+        button.btn.directory(ng-click="directoryPage()") Directory
+        button.btn.profile(ng-click="profilePage()") My Profile
+        button.btn.logout(ng-click="doLogout()") Logout
+
     section(ng-view)
     script(src="lib/build.js")
     script(src="js/main.js")
     script(src="js/main.constant.js")
     script(src="js/assets/main.config.js")
+    script(src="js/assets/navcontroller.js")
     script(src="js/assets/auth/auth.config.js")
     script(src="js/assets/auth/auth.controller.js")
     script(src="js/assets/auth/auth.factory.js")

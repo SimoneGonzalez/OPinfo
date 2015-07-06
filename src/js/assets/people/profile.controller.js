@@ -1,6 +1,6 @@
 angular
   .module('opinfo')
-  .controller('profileCtrl', function(Profile, $scope, $rootScope, $location) {
+  .controller('profileCtrl', function(Profile, $scope, $rootScope, $location, authFactory) {
     var vm = this;
 
     vm.profile = function() {

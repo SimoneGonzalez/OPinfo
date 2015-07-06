@@ -1,8 +1,10 @@
 angular
   .module('opinfo')
-  .controller('peopleCtrl', function(Person, $scope, $location) {
+  .controller('peopleCtrl', function(Person, $scope, $location, authFactory) {
     var vm = this;
 
+
+    authFactory.requireLogin();
     Person.getAll(function(people) {
       var people2 = Object.keys(people).map(function(k) {return people[k]});
       vm.finalPeople = [];

@@ -2,9 +2,9 @@ angular
   .module('opinfo')
   .config(function($routeProvider, $locationProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: 'index.html'
-      })
+      // .when('/', {
+      //   templateUrl: 'index.html'
+      // })
       .when('/login', {
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl',
@@ -33,10 +33,14 @@ angular
         controllerAs: 'profile'
       })
       .when('/contact', {
-        templateUrl: 'views/contact.html'
+        templateUrl: 'views/contact.html',
+        controller: 'peopleCtrl',
+        controllerAs: 'ppl'
       })
       .when('/donate', {
-        templateUrl: 'views/donate.html'
+        templateUrl: 'views/donate.html',
+        controller: 'peopleCtrl',
+        controllerAs: 'ppl'
       })
       // .when('/forgotPassword', {
       //   templateUrl: 'forgotpassword.html',
@@ -49,6 +53,7 @@ angular
       })
       .otherwise({
        redirectTo: '/',
-       templateUrl: 'views/home.html'
+       templateUrl: 'views/home.html',
+       controller: 'LogoutCtrl'
     });
   });

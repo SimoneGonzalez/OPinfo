@@ -34,7 +34,7 @@ angular
       });
     }
   })
-  .controller('LogoutCtrl', function($rootScope, $scope, $location, FIRE_URL) {
+  .controller('LogoutCtrl', function($rootScope, $scope, $location, FIRE_URL, authFactory) {
     var fb = new Firebase(FIRE_URL);
 
     fb.unauth(function() {
